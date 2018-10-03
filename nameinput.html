@@ -1,0 +1,25 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <input type="text" id="people">
+    <button onclick="count()">add person</button>
+    <h1 id="placeHolder"></h1>
+    <h2 id="names"></h2>
+    <script>
+      var total = 0;
+      var username = [];
+      function count() {
+        var a = document.getElementById('people').value;
+        document.getElementById('people').value = "";
+        total++;
+        
+        document.getElementById('placeHolder').innerHTML = total;
+        username.unshift(a);
+        document.getElementById('names').innerHTML = username;
+      }
+    </script>
+  </body>
+  
+</html>
